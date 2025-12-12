@@ -104,7 +104,7 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="mt-2">
-              <Link href="/#contact" onClick={closeMobile}>
+              <Link href="/contact" onClick={closeMobile}>
                 <Button className="w-full justify-center">
                   Book intro call
                 </Button>

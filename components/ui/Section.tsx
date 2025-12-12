@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { forwardRef, type ReactNode } from "react";
 
 interface SectionProps {
   children: ReactNode;
@@ -13,15 +13,20 @@ const variantClasses: Record<NonNullable<SectionProps["variant"]>, string> = {
   soft: "bg-accent-soft"
 };
 
-export default function Section(props: SectionProps) {
+const Section = forwardRef<HTMLElement, SectionProps>((props, ref) => {
   const { children, id, variant = "default", className } = props;
 
   return (
     <section
+      ref={ref}
       id={id}
-      className={`${variantClasses[variant]} py-section-sm md:py-section lg:py-section-lg ${className ?? ""}`}
+      className={`${variantClasses[variant]} py-36 md:py-44 ${className ?? ""}`}
     >
       {children}
     </section>
   );
-}
+});
+
+Section.displayName = "Section";
+
+export default Section;

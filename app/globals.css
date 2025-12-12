@@ -10,6 +10,7 @@ body {
 body {
   background-color: #f9fafb;
   color: #0f172a;
+  font-family: var(--font-saans), "__saans_cd5095", "__saans_Fallback_cd5095", sans-serif;
   text-rendering: optimizeLegibility;
 }
 
@@ -53,6 +54,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -90,6 +92,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

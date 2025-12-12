@@ -31,16 +31,16 @@ export default function FadeInSection(props: FadeInSectionProps) {
 
   return (
     <>
-    <motion.div
-      initial={{ opacity: 0, x: initialX, y: initialY }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      transition={{ duration: 0.4, ease: "easeOut", delay }}
-      viewport={{ once: true, amount: 0.2 }}
-      className={cn(className)}
-      {...rest}
-    >
-      {children}
-    </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: initialX, y: initialY }}
+        whileInView={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 0.4, ease: "easeOut", delay }}
+        viewport={{ once: true, amount: 0.2 }}
+        className={cn(className)}
+        {...(rest as any)}
+      >
+        {children}
+      </motion.div>
     </>
   );
 }
