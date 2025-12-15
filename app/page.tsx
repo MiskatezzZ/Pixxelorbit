@@ -1,23 +1,24 @@
 import HeroSection from "@/components/HeroSection";
+import BenefitsSection from "@/components/BenefitsSection";
+import SelectedWorkSection from "@/components/SelectedWorkSection";
+import HowWeWorkSection from "@/components/HowWeWorkSection";
 import FeaturesSection from "@/components/FeaturesSection";
-import WorkSection from "@/components/WorkSection";
-import BeforeAfterSection from "@/components/BeforeAfterSection";
-import SystemFrameworkSection from "@/components/SystemFrameworkSection";
-import WhyChooseSection from "@/components/WhyChooseSection";
 import BigTestimonialSection from "@/components/BigTestimonialSection";
+import WorldMapSection from "@/components/WorldMapSection";
 import FinalCTASection from "@/components/FinalCTASection";
 
 export default function Page() {
-    return (
-        <>
-            <HeroSection />
-            <FeaturesSection />
-            <WorkSection />
-            <BeforeAfterSection />
-            <SystemFrameworkSection />
-            <WhyChooseSection />
-            <BigTestimonialSection />
-            <FinalCTASection />
-        </>
-    );
+  return (
+    <>
+      <HeroSection />
+      <BenefitsSection />
+      <SelectedWorkSection />
+      <HowWeWorkSection />
+      <FeaturesSection />
+      <BigTestimonialSection />
+      <WorldMapSection />
+      <FinalCTASection />
+    </>
+  );
 }
+

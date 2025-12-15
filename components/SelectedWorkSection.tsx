@@ -1,14 +1,13 @@
 import Link from "next/link";
 import Section from "@/components/ui/Section";
 import Container from "@/components/ui/Container";
-import SurfaceCard from "@/components/ui/SurfaceCard";
 import FadeInSection from "@/components/ui/FadeInSection";
 import { ArrowUpRight } from "lucide-react";
 
 const workItems = [
     {
         title: "SaaS Onboarding Redesign",
-        outcome: "Reduced drop-off by 40% with a unified, frictionless flow.",
+        outcome: "↑ Reduced drop-offs in first session",
         tags: ["Website", "Onboarding", "Funnels"],
         visual: (
             <div className="w-full h-full bg-gradient-to-br from-gray-900 via-indigo-900/30 to-gray-900 p-8 flex flex-col gap-4">
@@ -40,7 +39,7 @@ const workItems = [
     },
     {
         title: "Operations Control Center",
-        outcome: "Unified 5 disconnected tools into one Airtable base with full automation.",
+        outcome: "↑ One dashboard replacing 4 tools",
         tags: ["Internal Tools", "Automations", "CRM"],
         visual: (
             <div className="w-full h-full bg-white p-6 flex flex-col gap-3">
@@ -66,8 +65,8 @@ const workItems = [
     },
     {
         title: "Launch System Template",
-        outcome: "A reusable funnel framework that shipped 3 products in Q4 2024.",
-        tags: ["Launch", "Website", "Email", "Funnels"],
+        outcome: "↑ Reusable launch framework (shipped 3 products)",
+        tags: ["Launch", "Email", "Funnels"],
         visual: (
             <div className="w-full h-full bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 p-8 flex items-center justify-center">
                 <div className="relative flex items-center gap-4">
@@ -95,7 +94,7 @@ const workItems = [
 
 export default function SelectedWorkSection() {
     return (
-        <Section className="border-t border-border-subtle/30 bg-gradient-to-b from-background to-muted/20">
+        <Section className="border-t border-border-subtle/30 bg-gradient-to-b from-background to-muted/20 pt-28 pb-40 md:pt-32 md:pb-44">
             <Container>
                 <div className="space-y-16">
                     <FadeInSection className="flex justify-between items-end">
@@ -104,7 +103,7 @@ export default function SelectedWorkSection() {
                                 Selected Systems
                             </h2>
                             <p className="text-lg text-muted-foreground">
-                                Recent work for growth-focused teams.
+                                A few recent systems we designed and shipped.
                             </p>
                         </div>
                         <Link href="/work" className="hidden md:flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent transition-colors">
@@ -116,10 +115,10 @@ export default function SelectedWorkSection() {
                         {workItems.map((item, index) => (
                             <Link href="/work" key={item.title} className="group block">
                                 <FadeInSection delay={0.05 * index}>
-                                    <div className="grid md:grid-cols-2 gap-8 items-center rounded-2xl border-2 border-border-subtle bg-surface p-3 hover:border-accent/30 hover:shadow-2xl transition-all duration-500">
+                                    <div className="grid md:grid-cols-2 gap-8 items-center rounded-2xl border border-border-subtle/60 bg-surface p-3 hover:border-border-subtle/80 hover:shadow-soft transition-all duration-500">
 
                                         {/* Visual Half */}
-                                        <div className="aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-xl shadow-xl relative">
+                                        <div className="aspect-[4/3] md:aspect-[16/10] w-full overflow-hidden rounded-xl border border-border-subtle/60 bg-white shadow-xl relative">
                                             {item.visual}
                                         </div>
 
@@ -129,16 +128,16 @@ export default function SelectedWorkSection() {
                                                 <h3 className="text-2xl font-bold text-foreground group-hover:text-accent transition-colors">
                                                     {item.title}
                                                 </h3>
-                                                <p className="text-base leading-relaxed text-muted-foreground">
+                                                <p className="text-sm font-medium text-foreground/75">
                                                     {item.outcome}
                                                 </p>
                                             </div>
 
                                             <div className="flex flex-wrap gap-2">
-                                                {item.tags.map((tag) => (
+                                                {item.tags.slice(0, 3).map((tag) => (
                                                     <span
                                                         key={tag}
-                                                        className="inline-flex items-center rounded-full border border-accent/20 bg-accent/5 px-3 py-1.5 text-xs font-semibold text-accent"
+                                                        className="inline-flex items-center rounded-full border border-border-subtle/70 bg-muted/30 px-3 py-1.5 text-xs font-medium text-foreground/70"
                                                     >
                                                         {tag}
                                                     </span>

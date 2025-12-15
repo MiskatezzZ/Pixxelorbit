@@ -26,7 +26,11 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <Section id="testimonials" variant="soft" className="border-t border-border-subtle/60">
+    <Section
+      id="testimonials"
+      variant="soft"
+      className="border-t border-border-subtle/60 pt-44 pb-36 md:pt-52 md:pb-44"
+    >
       <Container>
         <div className="space-y-10">
           <FadeInSection className="max-w-2xl space-y-3">
@@ -39,8 +43,8 @@ export default function TestimonialsSection() {
             </p>
           </FadeInSection>
 
-          <div className="grid gap-6 md:grid-cols-3">
-            {testimonials.map((item, index) => (
+          <div className="grid gap-6 md:grid-cols-2">
+            {testimonials.slice(0, 2).map((item, index) => (
               <FadeInSection key={item.name} delay={0.06 * index}>
                 <SurfaceCard className="flex h-full flex-col bg-surface/80">
                   <div className="mb-3 flex items-center gap-3">
@@ -52,7 +56,7 @@ export default function TestimonialsSection() {
                       <p>{item.meta}</p>
                     </div>
                   </div>
-                  <p className="text-sm leading-relaxed text-foreground">
+                  <p className="text-[0.95rem] leading-relaxed text-foreground md:text-base">
                     “{item.quote}”
                   </p>
                 </SurfaceCard>

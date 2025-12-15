@@ -120,15 +120,15 @@ const capabilities = [
 
 export default function FeaturesSection() {
     return (
-        <Section className="border-t border-border-subtle/30">
+        <Section className="border-t border-border-subtle/30 pt-20 pb-20 md:pt-24 md:pb-24">
             <Container>
-                <div className="space-y-16">
+                <div className="space-y-12">
                     <FadeInSection className="max-w-2xl space-y-4">
                         <h2 className="text-heading font-semibold text-foreground">
-                            Everything you need to grow on autopilot
+                            What we help you systemize
                         </h2>
                         <p className="text-lg text-muted-foreground w-full max-w-xl">
-                            We replace your disconnected stack with a single, unified system.
+                            We connect website, data, and automations into one calm system.
                         </p>
                     </FadeInSection>
 

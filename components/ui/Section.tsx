@@ -1,4 +1,5 @@
 import { forwardRef, type ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface SectionProps {
   children: ReactNode;
@@ -20,7 +21,7 @@ const Section = forwardRef<HTMLElement, SectionProps>((props, ref) => {
     <section
       ref={ref}
       id={id}
-      className={`${variantClasses[variant]} py-36 md:py-44 ${className ?? ""}`}
+      className={cn(variantClasses[variant], "py-36 md:py-44", className)}
     >
       {children}
     </section>

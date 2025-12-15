@@ -24,9 +24,9 @@ export default function RootLayout(props: { children: ReactNode }) {
               className="pointer-events-none fixed inset-0 z-0"
               style={{
                 backgroundImage: `
-                  radial-gradient(circle 520px at 0% 160px, rgba(37, 99, 235, 0.45), transparent),
-                  radial-gradient(circle 520px at 100% 160px, rgba(37, 99, 235, 0.45), transparent),
-                  radial-gradient(circle 640px at 50% -140px, rgba(219, 234, 254, 0.6), transparent)
+                  radial-gradient(circle 520px at 0% 160px, rgba(37, 99, 235, 0.3), transparent),
+                  radial-gradient(circle 520px at 100% 160px, rgba(37, 99, 235, 0.3), transparent),
+                  radial-gradient(circle 640px at 50% -140px, rgba(219, 234, 254, 0.4), transparent)
                 `,
               }}
             />

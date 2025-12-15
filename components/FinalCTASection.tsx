@@ -6,7 +6,7 @@ import FadeInSection from "@/components/ui/FadeInSection";
 
 export default function FinalCTASection() {
   return (
-    <Section id="contact" className="border-t border-border-subtle/60 py-24 md:py-32">
+    <Section id="contact" className="border-t border-border-subtle/60 pt-40 pb-24 md:pt-52 md:pb-32">
       <Container>
         <FadeInSection className="max-w-2xl space-y-6">
           <div className="space-y-3">

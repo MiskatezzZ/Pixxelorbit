@@ -64,7 +64,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     <div
       className={cn(
         "fixed inset-x-0 z-40 w-full px-4 md:px-6 transition-all duration-200",
-        visible ? "top-5" : "top-2",
+        visible ? "top-4" : "top-2",
         className,
       )}
     >
@@ -85,7 +85,8 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
     <div
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-5xl flex-row items-center justify-between rounded-full border border-border-subtle/40 bg-background/60 px-4 py-2 backdrop-blur-md shadow-[0_0_0_1px_rgba(255,_255,_255,_0.35)_inset] transition-all duration-200 lg:flex",
-        visible && "bg-background/70 shadow-[0_20px_60px_rgba(15,_23,_42,_0.03)] translate-y-[3px]",
+        visible &&
+          "max-w-3xl bg-background/75 px-3 py-1.5 shadow-[0_20px_60px_rgba(15,_23,_42,_0.03)] translate-y-[2px]",
         className,
       )}
     >
@@ -128,7 +129,8 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
     <div
       className={cn(
         "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 transition-all duration-200 lg:hidden",
-        visible && "bg-background/60 backdrop-blur-md shadow-[0_20px_60px_rgba(15,_23,_42,_0.03)] border border-border-subtle/40 dark:bg-neutral-950/85",
+        visible &&
+          "max-w-[calc(100vw-3rem)] bg-background/70 backdrop-blur-md shadow-[0_20px_60px_rgba(15,_23,_42,_0.03)] border border-border-subtle/40 dark:bg-neutral-950/85",
         className,
       )}
     >

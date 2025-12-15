@@ -17,7 +17,6 @@ import {
 const links = [
   { href: "/services", label: "Services" },
   { href: "/work", label: "Work" },
-  { href: "/approach", label: "Approach" },
   { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" }
 ];
@@ -52,9 +51,6 @@ export default function Navbar() {
           />
 
           <div className="hidden items-center gap-3 md:flex">
-            <div className="hidden text-xs text-muted-foreground sm:block">
-              <span className="font-medium text-foreground">Available from January</span>
-            </div>
             <Link href="/contact" className="hidden sm:inline-flex">
               <Button className="bg-accent/80 text-accent-foreground shadow-none hover:bg-accent/90">
                 Book intro call
